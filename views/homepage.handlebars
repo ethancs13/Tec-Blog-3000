@@ -1,0 +1,17 @@
+<!-- For each post display the title, name, date_created, and post_content -->
+{{#each posts as |post|}}
+
+<section>
+    <div class="postDiv">
+        <div class="postHeader">
+            <h2><a href="/posts/{{post.id}}">{{post.title}}</a></h2>
+            <p>Posted by {{post.user.name}} on {{format_date post.date_created}}</p>
+        </div>  
+        <div class="postBody">
+            <p>{{post.post_content}}</p>
+        </div>
+    </div>
+    
+</section>
+
+{{/each}}

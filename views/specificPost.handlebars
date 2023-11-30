@@ -1,0 +1,51 @@
+<!-- Page for showing specific posts and comments attached -->
+
+<section>
+    <div class="postDiv">
+        <div class="postHeader">
+            <h2>{{post.title}}</h2>
+            <p>Posted by {{post.user.name}} on {{format_date post.date_created}}</p>
+        </div>  
+        <div class="postBody">
+            <p>{{post.post_content}}</p>
+        </div>
+    </div>
+
+<h2>Comments:</h2>
+
+ {{#each comments as |comment|}}
+    <div class="commentsDiv">
+        <div class="commentHeader">
+            <p>Comment by {{comment.user.name}} on {{format_date comment.date_created}} </p>
+        </div>
+        <div class="commentBody">
+            <p>{{comment.comment_content}}</p>
+        </div>
+    </div>
+  {{/each}}
+
+
+{{#if logged_in}}
+<!-- Form for posting comment -->
+<div class="formDiv">
+    <form class="commentForm">
+    <div class="entryDiv">
+        <label for="commentContent">Submit a Comment:</label>
+        <input class="formInput" type="text" id="commentContent"/>
+    </div>
+    <div class="entryDiv">
+        <button class="btn btn-primary" type="submit">Submit Comment</button>
+    </div>
+</form>
+</div>
+
+{{else}}
+<p>Please login to submit a comment.</p>
+{{/if}}
+
+
+
+
+
+    
+</section>
