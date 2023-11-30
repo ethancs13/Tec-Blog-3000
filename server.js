@@ -1,23 +1,14 @@
-// Handles file paths
 const path = require("path");
-// Express.js framework
 const express = require("express");
-// Express middleware for sessions
 const session = require("express-session");
-// Express view for handlebars templates
 const exphbs = require("express-handlebars");
-// Imports routes from controllers folder
 const routes = require("./controllers");
-// Imports custom functions for handlebars templates
 const helpers = require("./utils/helpers");
 
-// Sequelize instance to connect to database
 const sequelize = require("./config/connection");
 
-// Stores session in sequelize database
 const SequelizeStore = require("connect-session-sequelize")(session.Store);
 
-// Creates instance of express, and sets port
 const app = express();
 const PORT = process.env.PORT || 3001;
 
