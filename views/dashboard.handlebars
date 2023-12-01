@@ -1,22 +1,22 @@
-<h2>Dashboard</h2>
 
-<div>
-    <a href="/create"><button>Create Post</button></a>
+<div class="createButton">
+    <a href="/create"><button id="createBtn">Create Post</button></a>
 </div>
-<!-- shows all posts that belong to user -->
+<!-- shows all posts -->
 {{#each posts as |post|}}
 
 <section>
-    <div class="form">
-        <div>
+    <div class="postDiv">
+        <div class="postHeader">
             <h2>{{post.title}}</h2>
             <p>Posted by {{post.user.name}} on {{format_date post.date_created}}</p>
         </div>  
-        <div>
+        <div class="postBody">
             <p>{{post.post_content}}</p>
         </div>
+        <a href="/edit/{{post.id}}"><button>Edit This Post</button></a>
     </div>
-<a href="/update/{{post.id}}"><button>Update This Post</button></a>
+
 </section>
 
 {{/each}}

@@ -1,74 +1,164 @@
-/* global */
+/* Homepage page */
 * {
-    text-decoration: none;
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
 }
-.form {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    padding: 10px 0;
-    font-size: 20px;
-}
-.form div {
-    padding: 10px 0;
-}
-.title {
-    text-align: center;
-    font-size: 30px;
-}
-button {
-    font-size: 20px;
+
+body {
     padding: 10px;
-    border: none;
-    background-color: lightblue;
-    color: black;
+    background-color: #DEE7E7;
+}
+
+h1 {
+    padding: 10px;
+    font-size: 50px;
+    color: #222B30;
+}
+
+h2 {
+    margin: 10px 0px 10px 0px;
+    font-size: 30px;
+    text-align: center;
+}
+
+a {
+    margin-right: 10px;
+    text-decoration: none;
+    color: #372D4D;
+
+}
+
+button {
+    padding: 10px 20px;
     border-radius: 10px;
-}
-
-/* main.handlebars */
-.main_header {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-}
-.main_nav {
-    display: flex;
-    width: 50%;
-    align-items: center;
-    justify-content: space-around;
-}
-.main_nav a {
     font-size: 20px;
-    color: black;
-    cursor: pointer;
-    text-decoration: none;
+    background-color: #B7ADCF;
 }
 
-/* create.handlbars */
+ul {
+    padding: 10px 10px 0px 10px;
+}
 
-.input {
-    width: auto;
-    padding: 7px;
+a:hover, .postTitle:hover {
+    color: white;
+    transition: 0.3s ease;
+    
+}
+
+button:hover {
+    background-color: #A598C3;
+    cursor: pointer;
+}
+
+/* Homepage and dashboard page */ 
+.headerDiv {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    color: #CAF0F8;
+}
+
+.headerDiv, .footerDiv {
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background-color: #8E7EB4;
+}
+
+.links {
+    font-size: 25px;
+}
+
+#websiteTitle {
+    background-color: #A598C3;
+}
+
+.footerDiv {
+    padding: 10px;
+    text-align: center;
+}
+
+.postDiv {
+    margin: 10px 0px;
+    padding: 10px;
+    border-radius: 10px;
+    border: 3px solid black;
+    background-color: #A598C3;
+}
+
+.postHeader .postBody {
+    margin: 10px;
+}
+
+.nav {
+    margin: 20px 40px;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: left;
+}
+.nav a {
+    font-size: 20px;
+    margin: 0 30px;
+}
+.nav a:hover {
+    color: #222B30;
 }
 
-/* login.handlebars signup.handlebars */
-
-.signup .link {
-    text-decoration: none;
-    cursor: pointer;
-    color: black;
+.postTitle, .postTitleSpecific {
+    display: inline-block;
 }
 
-/* dashboard.handlebars */
+.postBody {
+    font-size: 25px;
+}
 
-/* posts */
+.createButton {
+    margin: 10px 0px 10px 0px;
+}
 
-.post_title {
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
+#createBtn {
+    width: 100%;
+}
+
+/* Form login signup page */
+.entryDiv, .signUpDiv, .loginDiv {
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+.formInput {
+    width: 100%;
+    padding: 10px 0px;
+    display: flex;
+    font-size: 20px;
+}
+
+#signUpLink, #loginLink {
+    font-size: 20px;
+    color: #6E5C99;
+}
+
+#signUpLink:hover, #loginLink:hover {
+    color: #2E2640;
+    transition: 0.3s ease;
+}
+
+/* edit post page */
+
+.buttonDiv {
+    display: flex;
+}
+
+.editButtons {
+    margin: 10px 10px 10px 0px;
+}
+
+/* specificPost page */
+
+.commentsDiv {
+    margin: 10px 0px;
+    padding: 10px;
+    border-radius: 10px;
+    border: 3px solid black;
+    background-color: #0077B6;
 }

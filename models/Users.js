@@ -3,7 +3,7 @@ const bcrypt = require("bcrypt");
 const sequelize = require("../config/connection");
 
 // Method that compares the typed password with hashed password stored in this.password
-// Returns true if match, else return false
+// Returns true if match, else return false.
 class Users extends Model {
   checkPassword(pw) {
     return bcrypt.compareSync(pw, this.password);
@@ -51,4 +51,5 @@ Users.init(
   }
 );
 
+// test
 module.exports = Users;

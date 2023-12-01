@@ -1,13 +1,13 @@
-<!-- For each post display the title, name, date_created, and post_content -->
+<!-- display title, name, date_created, and post_content for each post -->
 {{#each posts as |post|}}
 
 <section>
-    <div class="form">
-        <div>
-            <h2 class="link title"><a href="/posts/{{post.id}}">{{post.title}}</a></h2>
+    <div class="postDiv">
+        <div class="postHeader">
+           <a href="/posts/{{post.id}}"><h2 class="postTitle">{{post.title}}</h2></a>
             <p>Posted by {{post.user.name}} on {{format_date post.date_created}}</p>
         </div>  
-        <div>
+        <div class="postBody">
             <p>{{post.post_content}}</p>
         </div>
     </div>

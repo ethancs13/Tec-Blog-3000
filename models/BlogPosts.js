@@ -42,4 +42,5 @@ Posts.init(
   }
 );
 
+// test
 module.exports = Posts;

@@ -11,6 +11,7 @@ router.post("/", withAuth, async (req, res) => {
       user_id: req.session.user_id,
       post_id: req.body.post_id,
     });
+    console.log(newComment);
     res.status(200).json(newComment);
   } catch (err) {
     res.status(500).json(err);

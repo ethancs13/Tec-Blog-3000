@@ -1,6 +1,6 @@
-const Posts = require("./Post");
-const Comments = require("./Comment");
-const Users = require("./User");
+const Posts = require("./BlogPosts");
+const Comments = require("./Comments");
+const Users = require("./Users");
 
 // Post can belong to any user with the user_id as reference
 Posts.belongsTo(Users, {
@@ -36,4 +36,5 @@ Users.hasMany(Comments, {
   onDelete: "CASCADE",
 });
 
+// test
 module.exports = { Posts, Comments, Users };
