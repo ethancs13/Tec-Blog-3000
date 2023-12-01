@@ -36,7 +36,7 @@ const sess = {
 };
 
 // Use the above middleware in express
-app.use(session(sess));
+app.use(session(sess({secret:'supersecret'})));
 
 // Sets handlebars as viewing engine
 app.engine("handlebars", hbs.engine);
