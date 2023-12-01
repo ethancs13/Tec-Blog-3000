@@ -2,12 +2,12 @@
 {{#each posts as |post|}}
 
 <section>
-    <div class="postDiv">
-        <div class="postHeader">
+    <div class="">
+        <div class="">
             <h2><a href="/posts/{{post.id}}">{{post.title}}</a></h2>
             <p>Posted by {{post.user.name}} on {{format_date post.date_created}}</p>
         </div>  
-        <div class="postBody">
+        <div class="">
             <p>{{post.post_content}}</p>
         </div>
     </div>
