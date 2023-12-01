@@ -24,7 +24,7 @@ app.use(express.static(path.join(__dirname, "public")));
 
 // Session middleware
 const sess = {
-  secret: process.env.DB_SESSION_SECRET,
+  secret: "secrettttt",
   cookie: {
     maxAge: 24 * 60 * 60 * 1000,
   },
@@ -36,7 +36,7 @@ const sess = {
 };
 
 // Use the above middleware in express
-app.use(session(sess({secret:'supersecret'})));
+app.use(session(sess));
 
 // Sets handlebars as viewing engine
 app.engine("handlebars", hbs.engine);
