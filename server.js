@@ -49,6 +49,6 @@ app.use(routes);
 // Sync the sequelize models to database, won't drop or recreate tables if they exist already
 sequelize.sync({ force: false }).then(() => {
   app.listen(PORT, () =>
-    console.log(`Server listening on http://localhost:${PORT}`)
+    console.log(`Server listening on ${PORT}`)
   );
 });
