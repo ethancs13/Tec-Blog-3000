@@ -1,8 +1,8 @@
 const post_handler = async (event) => {
     event.preventDefault();
   
-    const title = document.querySelector("#userTitle").value.trim();
-    const body = document.querySelector("#userBody").value.trim();
+    const title = document.querySelector("#title").value.trim();
+    const body = document.querySelector("#user").value.trim();
   
     if (title && body) {
       try {

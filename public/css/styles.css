@@ -1,0 +1,74 @@
+/* global */
+* {
+    text-decoration: none;
+}
+.form {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 10px 0;
+    font-size: 20px;
+}
+.form div {
+    padding: 10px 0;
+}
+.title {
+    text-align: center;
+    font-size: 30px;
+}
+button {
+    font-size: 20px;
+    padding: 10px;
+    border: none;
+    background-color: lightblue;
+    color: black;
+    border-radius: 10px;
+}
+
+/* main.handlebars */
+.main_header {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.main_nav {
+    display: flex;
+    width: 50%;
+    align-items: center;
+    justify-content: space-around;
+}
+.main_nav a {
+    font-size: 20px;
+    color: black;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+/* create.handlbars */
+
+.input {
+    width: auto;
+    padding: 7px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* login.handlebars signup.handlebars */
+
+.signup .link {
+    text-decoration: none;
+    cursor: pointer;
+    color: black;
+}
+
+/* dashboard.handlebars */
+
+/* posts */
+
+.post_title {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}

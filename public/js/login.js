@@ -2,8 +2,8 @@ const login_handler = async (event) => {
     event.preventDefault();
   
     // Looks for username and password user these id's
-    const name = document.querySelector("#userLogin").value.trim();
-    const password = document.querySelector("#passwordLogin").value.trim();
+    const name = document.querySelector("#login").value.trim();
+    const password = document.querySelector("#pass").value.trim();
   
     // If they exist, send a fetch request to the database to log them in, otherwise go to homepage
     if (name && password) {

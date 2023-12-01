@@ -6,7 +6,7 @@ const del_handler = async (event) => {
     console.log(post_id);
     try {
       // Use template literal to fetch specific post_id to delete
-      const res = await fetch(`/api/posts/edit/${post_id}`, {
+      const res = await fetch(`/api/posts/update/${post_id}`, {
         method: "DELETE",
       });
   
@@ -24,7 +24,7 @@ const del_handler = async (event) => {
     }
   };
   
-  // Applies event listener to editForm class on edit.handlebars
+  // Applies event listener to updateForm class on update.handlebars
   document
     .querySelector("#deleteBtn")
     .addEventListener("click", del_handler);

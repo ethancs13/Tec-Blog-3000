@@ -1,15 +1,15 @@
 const router = require("express").Router();
-const { Posts, Comments, Users } = require("../../models");
+const { Post, Comment, User } = require("../../models");
 const withAuth = require("../../utils/auth");
 
 // Checks user's session data and if they are logged in
 router.get("/", async (req, res) => {
   try {
-    // Looks for all Posts and JOIN's it with Comments and Users
-    const postData = await Posts.findAll({
+    // Looks for all Posts and JOIN's it with Comments and User
+    const postData = await Post.findAll({
       include: [
         {
-          model: Users,
+          model: User,
           attributes: ["name"],
         },
         {
@@ -37,18 +37,18 @@ router.get("/", async (req, res) => {
 // Route for getting specific post id and all comments related to it
 router.get("/:id", withAuth, async (req, res) => {
   try {
-    const postData = await Posts.findByPk(req.params.id, {
+    const postData = await Post.findByPk(req.params.id, {
       include: [
         {
-          model: Users,
+          model: User,
           attributes: ["id", "name"],
         },
         {
-          model: Comments,
+          model: Comment,
           attributes: ["comment_content"],
           include: [
             {
-              model: Users,
+              model: User,
               attributes: ["name"],
             },
           ],

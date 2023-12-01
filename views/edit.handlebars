@@ -5,20 +5,20 @@
 <!-- form for editing post -->
 <form class="">
     <div class="">
-        <label for="userTitleEdit">Post Title:</label>
-        <input class="" type="text" id="userTitleEdit" value="{{post.title}}"/>
+        <label for="userTitleUpdate">Post Title:</label>
+        <input class="" type="text" id="userTitleUpdate" value="{{post.title}}"/>
     </div>
     <div class="">
-        <label for="userBodyEdit">Post Body:</label>
-        <textarea class="" type="text" id ="userBodyEdit">{{post.post_content}}</textarea>
+        <label for="userBodyUpdate">Post Body:</label>
+        <textarea class="" type="text" id ="userBodyUpdate">{{post.post_content}}</textarea>
     </div>
     <div class="">
-        <button class="btn btn-primary" type="submit" id="editBtn">Submit</button>
+        <button class="btn btn-primary" type="submit" id="updateBtn">Submit</button>
     </div>
     <div class="">
         <button class="btn btn-primary" type="submit" id="deleteBtn">Delete</button>
     </div>
 </form>
 
-<script src="/js/edit.js"></script>
+<script src="/js/update.js"></script>
 <script src="/js/delete.js"></script>
